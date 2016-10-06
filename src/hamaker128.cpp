@@ -4,11 +4,10 @@
 #include <complex.h>
 #include <string.h>
 
+namespace HM128 {
+
 double LeJ(double sigma, double epsilon, double r, double pi, double goldden,double R);
 double interaction(double sigma, double epsilon, double r, double pi, double goldden,double R);
-
-int main(int argc, char *argv[]) 
-{
 
   double r; 
   double sigma; 
@@ -21,9 +20,7 @@ int main(int argc, char *argv[])
   double inter; 
   double gradient; 
   int j = 0;
-  
-  
- 
+
   epsilon=atof(argv[1]);
   sigma=atof(argv[2]);
   
@@ -41,12 +38,7 @@ int main(int argc, char *argv[])
     printf("%d %lf %lf %lf %lf \n",j,r,LJ,inter,gradient);
   
   }
-  
-  return(0);
-}
-
-
-
+ 
 double LeJ(double sigma, double epsilon, double r,double pi, double goldden, double R)
 
   {
@@ -73,4 +65,6 @@ double interaction(double sigma, double epsilon, double r, double pi, double gol
 
   return interaction;
 
-}  
+}
+  
+}

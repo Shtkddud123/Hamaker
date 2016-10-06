@@ -1,16 +1,13 @@
-/*Edit:The interaction potentials has been checked and it is correct!*/
-
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <math.h> 
 #include <complex.h>
 #include <string.h>
 
+
+
 double LeJ(double sigma, double epsilon, double r, double pi, double goldden,double R);
 double interaction(double sigma, double epsilon, double r, double pi, double goldden,double R);
-
-int main(int argc, char *argv[]) 
-{
 
   double r; 
   double sigma; 
@@ -20,14 +17,10 @@ int main(int argc, char *argv[])
   double pi = 4.0*atan(1.0);
   double goldden = 0.059;
   double R = 20.0;
-  double inter;
+  double inter; 
   double gradient; 
   int j = 0;
-  
 
- /*defining the logarithmic part*/ 
- 
- 
   epsilon=atof(argv[1]);
   sigma=atof(argv[2]);
   
@@ -42,25 +35,18 @@ int main(int argc, char *argv[])
     gradient = -(LeJ(sigma,epsilon,r+0.02,pi,goldden,R) - LeJ(sigma,epsilon,r,pi,goldden,R))/0.02;
     j++; 
 
-    /*defining the logarithmic part*/ 
-
-
-    printf("%d %lf %lf %lf %lf \n",j,r,LJ,inter,gradient); 
+    printf("%d %lf %lf %lf %lf \n",j,r,LJ,inter,gradient);
   
   }
-  
-  return(0);
-}
-
-
-
+ 
 double LeJ(double sigma, double epsilon, double r,double pi, double goldden, double R)
 
   {
     double HM; 
- 
     
-    HM = (9*pi*goldden*epsilon*pow(sigma,9)/35)*((pow(R,3)*(3*pow(R,4) + 42*pow(R,2)*pow(r,2) + 35*pow(r,4)))/(r*pow(pow(r,2)-pow(R,2),6))) - (9*pi*goldden*epsilon*pow(sigma,6)*pow(R,3))/(pow(pow(r,2)-pow(R,2),3)); 
+    
+    HM = (3*pi*goldden*epsilon*pow(sigma,12)*pow(R,3)/5)*(5*pow(R,6) + 45*pow(R,4)*pow(r,2) + 63*pow(R,2)*pow(r,4) + 15*pow(r,6))/pow(pow(r,2)-pow(R,2),9)
+      - (9*pi*goldden*epsilon*pow(sigma,8)/5)*((pow(R,3)*(3*pow(R,2) + 5*pow(r,2))))/pow(pow(r,2) - pow(R,2),5);
 
     return HM;
 
@@ -71,11 +57,10 @@ double interaction(double sigma, double epsilon, double r, double pi, double gol
 
 { 
 
-  /*This still needs editing*/
-  double interaction;
-  
+  double interaction; 
 
-  interaction = ((27*pi*epsilon*goldden*pow(sigma,9))/35)*((pow(R,3)*(-pow(R,6) + 27*pow(R,4)*pow(r,2) + 189*pow(R,2)*pow(r,4) + 105*pow(r,6)))/(pow(r,2)*pow(pow(r,2) - pow(R,2),7))) - (54*pi*goldden*epsilon*pow(sigma,6))*((pow(R,3)*r)/pow(pow(r,2)-pow(R,2),4)); 
+  interaction = (108*pi*epsilon*goldden*pow(sigma,12)*pow(R,3)/5)*(5*pow(R,6) + 27*pow(R,4)*pow(r,2) + 27*pow(R,2)*pow(r,4) + 5*pow(r,6))*r/pow(pow(r,2) - pow(R,2),10)
+              - 72*pi*goldden*epsilon*pow(sigma,8)*pow(R,3)*(pow(r,2) + pow(R,2))*r/pow(pow(r,2) - pow(R,2),6); 
 
 
   return interaction;

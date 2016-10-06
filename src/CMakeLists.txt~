@@ -1,0 +1,2 @@
+add_library(src hamaker1210.cxx hamaker128.cxx hamaker96.cxx)
+
