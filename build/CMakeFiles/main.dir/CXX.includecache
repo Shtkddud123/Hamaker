@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
+../src/HM1210.hpp
+
 /home/noh/Desktop/Program/GIT/Hamaker/main.cpp
 iostream
 -
 vector
 -
+cmath
+-
+HM1210.hpp
+/home/noh/Desktop/Program/GIT/Hamaker/HM1210.hpp
 

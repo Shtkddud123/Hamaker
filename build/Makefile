@@ -124,17 +124,17 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named src
+# Target rules for targets named include
 
 # Build rule for target.
-src: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 src
-.PHONY : src
+include: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 include
+.PHONY : include
 
 # fast build rule for target.
-src/fast:
-	$(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
-.PHONY : src/fast
+include/fast:
+	$(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/build
+.PHONY : include/fast
 
 # target to build an object file
 main.o:
@@ -160,7 +160,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... src"
+	@echo "... include"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

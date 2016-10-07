@@ -111,64 +111,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/src.dir/rule:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
-.PHONY : src/CMakeFiles/src.dir/rule
+src/CMakeFiles/include.dir/rule:
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/include.dir/rule
+.PHONY : src/CMakeFiles/include.dir/rule
 
 # Convenience name for target.
-src: src/CMakeFiles/src.dir/rule
+include: src/CMakeFiles/include.dir/rule
 
-.PHONY : src
+.PHONY : include
 
 # fast build rule for target.
-src/fast:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
-.PHONY : src/fast
+include/fast:
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/build
+.PHONY : include/fast
 
 # target to build an object file
 hamaker1210.o:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker1210.o
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/hamaker1210.o
 .PHONY : hamaker1210.o
 
 # target to preprocess a source file
 hamaker1210.i:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker1210.i
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/hamaker1210.i
 .PHONY : hamaker1210.i
 
 # target to generate assembly for a file
 hamaker1210.s:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker1210.s
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/hamaker1210.s
 .PHONY : hamaker1210.s
-
-# target to build an object file
-hamaker128.o:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker128.o
-.PHONY : hamaker128.o
-
-# target to preprocess a source file
-hamaker128.i:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker128.i
-.PHONY : hamaker128.i
-
-# target to generate assembly for a file
-hamaker128.s:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker128.s
-.PHONY : hamaker128.s
-
-# target to build an object file
-hamaker96.o:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker96.o
-.PHONY : hamaker96.o
-
-# target to preprocess a source file
-hamaker96.i:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker96.i
-.PHONY : hamaker96.i
-
-# target to generate assembly for a file
-hamaker96.s:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker96.s
-.PHONY : hamaker96.s
 
 # Help Target
 help:
@@ -178,16 +148,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... src"
+	@echo "... include"
 	@echo "... hamaker1210.o"
 	@echo "... hamaker1210.i"
 	@echo "... hamaker1210.s"
-	@echo "... hamaker128.o"
-	@echo "... hamaker128.i"
-	@echo "... hamaker128.s"
-	@echo "... hamaker96.o"
-	@echo "... hamaker96.i"
-	@echo "... hamaker96.s"
 .PHONY : help
 
 

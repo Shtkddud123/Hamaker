@@ -182,7 +182,7 @@ Hamaker_Potential_SOURCE_DIR:STATIC=/home/noh/Desktop/Program/GIT/Hamaker
 LIBRARY_OUTPUT_PATH:PATH=
 
 //Dependencies for target
-src_LIB_DEPENDS:STATIC=
+include_LIB_DEPENDS:STATIC=
 
 
 ########################

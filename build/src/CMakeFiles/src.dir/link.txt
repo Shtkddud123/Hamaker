@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsrc.a  CMakeFiles/src.dir/hamaker1210.o CMakeFiles/src.dir/hamaker128.o CMakeFiles/src.dir/hamaker96.o
-/usr/bin/ranlib libsrc.a

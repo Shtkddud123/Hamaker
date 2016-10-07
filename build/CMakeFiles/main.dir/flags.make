@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/noh/Desktop/Program/GIT/Hamaker/src 
+CXX_INCLUDES = -I/home/noh/Desktop/Program/GIT/Hamaker/src -I/home/noh/Desktop/Program/GIT/Hamaker/include 
 

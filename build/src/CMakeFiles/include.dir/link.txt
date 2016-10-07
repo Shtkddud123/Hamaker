@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinclude.a  CMakeFiles/include.dir/hamaker1210.o
+/usr/bin/ranlib libinclude.a

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/noh/Desktop/Program/GIT/Hamaker/src/HM1210.hpp
+
+/home/noh/Desktop/Program/GIT/Hamaker/src/hamaker1210.cpp
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+complex.h
+-
+HM1210.hpp
+/home/noh/Desktop/Program/GIT/Hamaker/src/HM1210.hpp
+
