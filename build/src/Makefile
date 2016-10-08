@@ -58,8 +58,8 @@ CMAKE_BINARY_DIR = /home/noh/Desktop/Program/GIT/Hamaker/build
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,33 +111,33 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/include.dir/rule:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/include.dir/rule
-.PHONY : src/CMakeFiles/include.dir/rule
+src/CMakeFiles/src.dir/rule:
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
+.PHONY : src/CMakeFiles/src.dir/rule
 
 # Convenience name for target.
-include: src/CMakeFiles/include.dir/rule
+src: src/CMakeFiles/src.dir/rule
 
-.PHONY : include
+.PHONY : src
 
 # fast build rule for target.
-include/fast:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/build
-.PHONY : include/fast
+src/fast:
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
+.PHONY : src/fast
 
 # target to build an object file
 hamaker1210.o:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/hamaker1210.o
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker1210.o
 .PHONY : hamaker1210.o
 
 # target to preprocess a source file
 hamaker1210.i:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/hamaker1210.i
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker1210.i
 .PHONY : hamaker1210.i
 
 # target to generate assembly for a file
 hamaker1210.s:
-	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/include.dir/build.make src/CMakeFiles/include.dir/hamaker1210.s
+	cd /home/noh/Desktop/Program/GIT/Hamaker/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/hamaker1210.s
 .PHONY : hamaker1210.s
 
 # Help Target
@@ -148,7 +148,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... include"
+	@echo "... src"
 	@echo "... hamaker1210.o"
 	@echo "... hamaker1210.i"
 	@echo "... hamaker1210.s"

@@ -8,7 +8,7 @@
 //double interaction(double sigma, double epsilon, double r, double pi, double goldden,double R);
 
   /* Script to calculate the Hamaker constant */ 
-using namespace HM1210 { 
+using namespace HM1210;
 
 void printPotential() {
   
@@ -33,5 +33,5 @@ void printPotential() {
     printf("%d %lf %lf %lf %lf \n",j,r,LJ,inter,gradient); 
   }
   
-}	
 }
+    

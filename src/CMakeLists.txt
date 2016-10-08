@@ -1,2 +1,2 @@
-add_library(include hamaker1210.cpp)
+add_library(src hamaker1210.cpp HM1210.hpp)
 
